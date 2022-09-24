@@ -1,5 +1,5 @@
 import { getVueAuthenticate } from "@/plugins/vue-authenticator"
-import { register, login, logout, sendPasswordResetLink, resetPassword } from '@/api/auth'
+import {  login, logout, sendPasswordResetLink, resetPassword } from '@/api/auth'
 
 let vueAuth = getVueAuthenticate()
 
@@ -21,17 +21,6 @@ export const mutations = {
 }
 
 export const actions= {
-    register({commit}, payload) {
-        return new Promise((resolve, reject) => {
-            register(payload)
-                .then(({data}) => {
-                    commit('IS_AUTHENTICATED', {isAuthenticated: true})
-                    commit('SET_AUTH_USER', data['user'])
-                    commit('SET_AUTH_TOKEN', data['token'])
-                    resolve(data)
-                }).catch(error => reject(error))
-        })
-    },
     login({commit}, payload) {
         return new Promise((resolve, reject) => {
             login(payload)

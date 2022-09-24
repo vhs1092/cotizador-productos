@@ -1,19 +1,5 @@
 <template>
 <div>
-    <div class="row">
-        <div class="col-lg-6 offset-md-3">
-            <div class="row mb-4">
-                <ul class="list-group searchBox">
-                    <li class="list-group-item search-head">
-                        <h6 class="search">Search</h6>
-                    </li>
-                    <li class="list-group-item">
-                        <search placeholder="Search Post"></search>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
     <div class="row xs-column-reverse">
         <div class="col-lg-12">
             <div class="mr-4">
@@ -33,9 +19,6 @@ export default {
         Blogs
     },
     methods: {
-        showSignUp() {
-            this.$eventBus.signUp();
-        },
         showSignIn() {
             this.$eventBus.signIn();
         }

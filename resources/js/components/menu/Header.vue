@@ -2,7 +2,7 @@
 <div class="d-flex flex-md-row align-items-center p-3 px-md-4 mb-1 bg-white border-bottom shadow-sm">
     <div class="container">
         <nav class="my-2 my-md-0 mr-md-3 nav">
-            <h5 class="my-0 mr-md-auto font-weight-normal nav mt-2 home" @click="home">Victor Blog</h5>
+            <h5 class="my-0 mr-md-auto font-weight-normal nav mt-2 home" @click="home">Osmos Cotizador</h5>
             <div class="nav  justify-content-end" v-if="$auth.check">
                 <div>
                     <b-nav tabs>
@@ -15,10 +15,7 @@
             </div>
 
             <button class="btn btn-outline-info justify-content-end" @click="signIn" v-if="!$auth.check">
-                Sign In
-            </button>
-            <button class="btn btn-outline-primary justify-content-end ml-2" @click="signUp" v-if="!$auth.check">
-                Register
+                Ingresar
             </button>
             <div class="justify-content-end d-flex" v-if="$auth.check">
                 <div class="dropdown">
@@ -26,7 +23,7 @@
                         <avatar :image="$auth.user.avatar" :width="40" :height="40"></avatar>
                     </div>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                        <a class="dropdown-item" @click.stop="profile">Profile</a>
+                        <!--a class="dropdown-item" @click.stop="profile">Profile</a-->
                         <a class="dropdown-item" @click.stop="signOut">Sign Out</a>
                     </div>
                 </div>
@@ -47,9 +44,6 @@ export default {
     methods: {
         signIn() {
             this.$eventBus.signIn()
-        },
-        signUp() {
-            this.$eventBus.signUp()
         },
         signOut() {
             this.$store.dispatch('auth/logout')

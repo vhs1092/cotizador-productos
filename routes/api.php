@@ -14,7 +14,6 @@
 Route::group(['prefix' => 'v1', 'namespace' => 'Api\V1'], function () {
     Route::resource('blogs', 'BlogsController');
     Route::post('blogs/save_imported', 'BlogsController@saveImportedBlogs');
-    Route::resource('register', 'RegisterController')->only(['store']);
 
     Route::post('login', 'LoginController@login');
     Route::get('logout', 'LoginController@logout');
