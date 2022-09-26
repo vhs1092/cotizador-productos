@@ -1072,7 +1072,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
-module.exports = __webpack_require__(59);
+module.exports = __webpack_require__(67);
 
 
 /***/ }),
@@ -1094,6 +1094,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_materiales_MaterialesCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_materiales_MaterialesCreate_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_materiales_MaterialesEdit_vue__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_materiales_MaterialesEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__components_materiales_MaterialesEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_cotizador_index_vue__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_cotizador_index_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__components_cotizador_index_vue__);
 
 /**
  * We will load all of this project's JavaScript dependencies 
@@ -1113,6 +1115,7 @@ window.Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]);
 
 
 
+
 /*Here are our routes where the index will redirect us to the products index page*/
 var routes = [{
     path: '/productos',
@@ -1124,9 +1127,14 @@ var routes = [{
     components: {
         materialesIndex: __WEBPACK_IMPORTED_MODULE_2__components_materiales_MaterialesIndex_vue___default.a
     }
+}, {
+    path: '/cotizador',
+    components: {
+        cotizadorIndex: __WEBPACK_IMPORTED_MODULE_7__components_cotizador_index_vue___default.a
+    }
 }, { path: '/admin/products/create', component: __WEBPACK_IMPORTED_MODULE_3__components_products_ProductsCreate_vue___default.a, name: 'createProduct' }, { path: '/admin/products/edit/:id', component: __WEBPACK_IMPORTED_MODULE_4__components_products_ProductsEdit_vue___default.a, name: 'editProduct' }, { path: '/admin/materiales/create', component: __WEBPACK_IMPORTED_MODULE_5__components_materiales_MaterialesCreate_vue___default.a, name: 'createMaterial' }, { path: '/admin/materiales/edit/:id', component: __WEBPACK_IMPORTED_MODULE_6__components_materiales_MaterialesEdit_vue___default.a, name: 'editMaterial' }];
 
-var router = new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]({ routes: routes });
+var router = new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]({ mode: "history", routes: routes });
 
 var app = new Vue({ router: router }).$mount('#app');
 
@@ -49859,6 +49867,879 @@ if (false) {
 
 /***/ }),
 /* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(60)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(65)
+/* template */
+var __vue_template__ = __webpack_require__(66)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/cotizador/index.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2d87ca7b", Component.options)
+  } else {
+    hotAPI.reload("data-v-2d87ca7b", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(61);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(63)("5e1ad086", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2d87ca7b\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2d87ca7b\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(62)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n#app {\n    font-family: Avenir, Helvetica, Arial, sans-serif;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    text-align: center;\n    color: #2c3e50;\n    margin-top: 60px;\n}\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+  Modified by Evan You @yyx990803
+*/
+
+var hasDocument = typeof document !== 'undefined'
+
+if (typeof DEBUG !== 'undefined' && DEBUG) {
+  if (!hasDocument) {
+    throw new Error(
+    'vue-style-loader cannot be used in a non-browser environment. ' +
+    "Use { target: 'node' } in your Webpack config to indicate a server-rendering environment."
+  ) }
+}
+
+var listToStyles = __webpack_require__(64)
+
+/*
+type StyleObject = {
+  id: number;
+  parts: Array<StyleObjectPart>
+}
+
+type StyleObjectPart = {
+  css: string;
+  media: string;
+  sourceMap: ?string
+}
+*/
+
+var stylesInDom = {/*
+  [id: number]: {
+    id: number,
+    refs: number,
+    parts: Array<(obj?: StyleObjectPart) => void>
+  }
+*/}
+
+var head = hasDocument && (document.head || document.getElementsByTagName('head')[0])
+var singletonElement = null
+var singletonCounter = 0
+var isProduction = false
+var noop = function () {}
+var options = null
+var ssrIdKey = 'data-vue-ssr-id'
+
+// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+// tags it will allow on a page
+var isOldIE = typeof navigator !== 'undefined' && /msie [6-9]\b/.test(navigator.userAgent.toLowerCase())
+
+module.exports = function (parentId, list, _isProduction, _options) {
+  isProduction = _isProduction
+
+  options = _options || {}
+
+  var styles = listToStyles(parentId, list)
+  addStylesToDom(styles)
+
+  return function update (newList) {
+    var mayRemove = []
+    for (var i = 0; i < styles.length; i++) {
+      var item = styles[i]
+      var domStyle = stylesInDom[item.id]
+      domStyle.refs--
+      mayRemove.push(domStyle)
+    }
+    if (newList) {
+      styles = listToStyles(parentId, newList)
+      addStylesToDom(styles)
+    } else {
+      styles = []
+    }
+    for (var i = 0; i < mayRemove.length; i++) {
+      var domStyle = mayRemove[i]
+      if (domStyle.refs === 0) {
+        for (var j = 0; j < domStyle.parts.length; j++) {
+          domStyle.parts[j]()
+        }
+        delete stylesInDom[domStyle.id]
+      }
+    }
+  }
+}
+
+function addStylesToDom (styles /* Array<StyleObject> */) {
+  for (var i = 0; i < styles.length; i++) {
+    var item = styles[i]
+    var domStyle = stylesInDom[item.id]
+    if (domStyle) {
+      domStyle.refs++
+      for (var j = 0; j < domStyle.parts.length; j++) {
+        domStyle.parts[j](item.parts[j])
+      }
+      for (; j < item.parts.length; j++) {
+        domStyle.parts.push(addStyle(item.parts[j]))
+      }
+      if (domStyle.parts.length > item.parts.length) {
+        domStyle.parts.length = item.parts.length
+      }
+    } else {
+      var parts = []
+      for (var j = 0; j < item.parts.length; j++) {
+        parts.push(addStyle(item.parts[j]))
+      }
+      stylesInDom[item.id] = { id: item.id, refs: 1, parts: parts }
+    }
+  }
+}
+
+function createStyleElement () {
+  var styleElement = document.createElement('style')
+  styleElement.type = 'text/css'
+  head.appendChild(styleElement)
+  return styleElement
+}
+
+function addStyle (obj /* StyleObjectPart */) {
+  var update, remove
+  var styleElement = document.querySelector('style[' + ssrIdKey + '~="' + obj.id + '"]')
+
+  if (styleElement) {
+    if (isProduction) {
+      // has SSR styles and in production mode.
+      // simply do nothing.
+      return noop
+    } else {
+      // has SSR styles but in dev mode.
+      // for some reason Chrome can't handle source map in server-rendered
+      // style tags - source maps in <style> only works if the style tag is
+      // created and inserted dynamically. So we remove the server rendered
+      // styles and inject new ones.
+      styleElement.parentNode.removeChild(styleElement)
+    }
+  }
+
+  if (isOldIE) {
+    // use singleton mode for IE9.
+    var styleIndex = singletonCounter++
+    styleElement = singletonElement || (singletonElement = createStyleElement())
+    update = applyToSingletonTag.bind(null, styleElement, styleIndex, false)
+    remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true)
+  } else {
+    // use multi-style-tag mode in all other cases
+    styleElement = createStyleElement()
+    update = applyToTag.bind(null, styleElement)
+    remove = function () {
+      styleElement.parentNode.removeChild(styleElement)
+    }
+  }
+
+  update(obj)
+
+  return function updateStyle (newObj /* StyleObjectPart */) {
+    if (newObj) {
+      if (newObj.css === obj.css &&
+          newObj.media === obj.media &&
+          newObj.sourceMap === obj.sourceMap) {
+        return
+      }
+      update(obj = newObj)
+    } else {
+      remove()
+    }
+  }
+}
+
+var replaceText = (function () {
+  var textStore = []
+
+  return function (index, replacement) {
+    textStore[index] = replacement
+    return textStore.filter(Boolean).join('\n')
+  }
+})()
+
+function applyToSingletonTag (styleElement, index, remove, obj) {
+  var css = remove ? '' : obj.css
+
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = replaceText(index, css)
+  } else {
+    var cssNode = document.createTextNode(css)
+    var childNodes = styleElement.childNodes
+    if (childNodes[index]) styleElement.removeChild(childNodes[index])
+    if (childNodes.length) {
+      styleElement.insertBefore(cssNode, childNodes[index])
+    } else {
+      styleElement.appendChild(cssNode)
+    }
+  }
+}
+
+function applyToTag (styleElement, obj) {
+  var css = obj.css
+  var media = obj.media
+  var sourceMap = obj.sourceMap
+
+  if (media) {
+    styleElement.setAttribute('media', media)
+  }
+  if (options.ssrId) {
+    styleElement.setAttribute(ssrIdKey, obj.id)
+  }
+
+  if (sourceMap) {
+    // https://developer.chrome.com/devtools/docs/javascript-debugging
+    // this makes source maps inside style tags work properly in Chrome
+    css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */'
+    // http://stackoverflow.com/a/26603875
+    css += '\n/*# sourceMappingURL=data:application/json;base64,' + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + ' */'
+  }
+
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = css
+  } else {
+    while (styleElement.firstChild) {
+      styleElement.removeChild(styleElement.firstChild)
+    }
+    styleElement.appendChild(document.createTextNode(css))
+  }
+}
+
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports) {
+
+/**
+ * Translates the list format produced by css-loader into something
+ * easier to manipulate.
+ */
+module.exports = function listToStyles (parentId, list) {
+  var styles = []
+  var newStyles = {}
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i]
+    var id = item[0]
+    var css = item[1]
+    var media = item[2]
+    var sourceMap = item[3]
+    var part = {
+      id: parentId + ':' + i,
+      css: css,
+      media: media,
+      sourceMap: sourceMap
+    }
+    if (!newStyles[id]) {
+      styles.push(newStyles[id] = { id: id, parts: [part] })
+    } else {
+      newStyles[id].parts.push(part)
+    }
+  }
+  return styles
+}
+
+
+/***/ }),
+/* 65 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'App',
+    components: {},
+    data: function data() {
+        return {
+            products: [{
+                name: '',
+                unit: null,
+                width: '',
+                height: ''
+            }],
+            allProducts: []
+        };
+    },
+    mounted: function mounted() {
+        var app = this;
+        axios.get('/api/v1/products').then(function (resp) {
+            app.allProducts = resp.data;
+        }).catch(function (resp) {
+            alert("Could not load products");
+        });
+    },
+
+    methods: {
+        addProduct: function addProduct() {
+            this.products.push({
+                name: '',
+                width: '',
+                height: ''
+            });
+        },
+        deleteProduct: function deleteProduct(counter) {
+            this.products.splice(counter, 1);
+        },
+        handleClick: function handleClick() {
+            var productsMaterials = [{
+                name: 'puerta-pvc',
+                materials: [{
+                    id: '1',
+                    name: 'visagra',
+                    isUnitary: true,
+                    cant: 2
+                }, {
+                    id: "2",
+                    name: 'pvc',
+                    isUnitary: false,
+                    width: 1,
+                    height: 0.50
+                }, {
+                    id: '3',
+                    name: 'vidrio',
+                    isUnitary: false,
+                    width: 1,
+                    height: 0.50
+                }]
+            }, {
+                name: 'ventana-pvc',
+                materials: [{
+                    id: '1',
+                    name: 'visagra',
+                    isUnitary: true,
+                    cant: 2
+                }, {
+                    id: "2",
+                    name: 'pvc',
+                    isUnitary: false,
+                    width: 1,
+                    height: 0.50
+                }, {
+                    id: '3',
+                    name: 'vidrio',
+                    isUnitary: false,
+                    width: 1,
+                    height: 0.50
+                }]
+            }, {
+                name: 'puerta-aluminio',
+                materials: [{
+                    id: '1',
+                    name: 'visagra',
+                    isUnitary: true,
+                    cant: 2
+                }, {
+                    id: "2",
+                    name: 'aluminio',
+                    isUnitary: false,
+                    width: 1,
+                    height: 0.50
+                }, {
+                    id: '3',
+                    name: 'vidrio',
+                    isUnitary: false,
+                    width: 1,
+                    height: 0.50
+                }]
+            }, {
+                name: 'ventana-aluminio',
+                materials: [{
+                    id: '1',
+                    name: 'visagra',
+                    isUnitary: true,
+                    cant: 2
+                }, {
+                    id: "2",
+                    name: 'aluminio',
+                    isUnitary: false,
+                    width: 1,
+                    height: 0.50
+                }, {
+                    id: '3',
+                    name: 'vidrio',
+                    isUnitary: false,
+                    width: 1,
+                    height: 0.50
+                }]
+            }];
+
+            var materials = {};
+            var planchas = {};
+
+            this.products.map(function (product) {
+                var findProduct = productsMaterials.find(function (prod) {
+                    return prod.name === product.name;
+                });
+                findProduct.materials.map(function (material) {
+
+                    var findMaterial = Object.keys(materials).find(function (element) {
+                        return materials[element].name == material.name;
+                    });
+                    if (material.isUnitary) {
+                        if (findMaterial) {
+                            materials[findMaterial.id] = materials[findMaterial.id] + 1;
+                        } else {
+                            materials[findMaterial.id] = 1;
+                        }
+                    } else {}
+                });
+            });
+            console.info(this.products);
+        }
+    }
+});
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { attrs: { id: "app" } }, [
+    _c("div", { staticClass: "container-sm" }, [
+      _c("h4", [_vm._v("Cotizador")]),
+      _vm._v(" "),
+      _c(
+        "form",
+        { staticClass: "frm" },
+        [
+          _vm._l(_vm.products, function(product, counter) {
+            return _c("div", { key: counter, staticClass: "row" }, [
+              _vm._m(0, true),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group col-md-3" }, [
+                _c(
+                  "label",
+                  {
+                    staticClass: "control-label mb-2",
+                    attrs: { for: "title" }
+                  },
+                  [_vm._v("Producto")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "select",
+                  {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model.lazy",
+                        value: product.name,
+                        expression: "product.name",
+                        modifiers: { lazy: true }
+                      }
+                    ],
+                    staticClass:
+                      "form-select form-select-sm form-control form-control-sm",
+                    attrs: { "aria-label": ".form-select-sm example" },
+                    on: {
+                      change: function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.$set(
+                          product,
+                          "name",
+                          $event.target.multiple
+                            ? $$selectedVal
+                            : $$selectedVal[0]
+                        )
+                      }
+                    }
+                  },
+                  _vm._l(_vm.allProducts, function(product) {
+                    return _c("option", { domProps: { value: product.id } }, [
+                      _vm._v(_vm._s(product.name))
+                    ])
+                  }),
+                  0
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group col-md-3" }, [
+                _c("label", { staticClass: "control-label mb-2" }, [
+                  _vm._v("Ancho")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model.lazy",
+                      value: product.width,
+                      expression: "product.width",
+                      modifiers: { lazy: true }
+                    }
+                  ],
+                  staticClass: "form-control form-control-sm",
+                  attrs: { type: "number", id: "fname", placeholder: "Ancho" },
+                  domProps: { value: product.width },
+                  on: {
+                    change: function($event) {
+                      return _vm.$set(product, "width", $event.target.value)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group col-md-3" }, [
+                _c("label", { staticClass: "control-label mb-2" }, [
+                  _vm._v("Alto")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model.lazy",
+                      value: product.height,
+                      expression: "product.height",
+                      modifiers: { lazy: true }
+                    }
+                  ],
+                  staticClass: "form-control form-control-sm",
+                  attrs: { type: "number", id: "fname", placeholder: "Alto" },
+                  domProps: { value: product.height },
+                  on: {
+                    change: function($event) {
+                      return _vm.$set(product, "height", $event.target.value)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group col-md-1" }, [
+                _c("label", { staticClass: "control-label mb-2" }, [
+                  _vm._v("Cantidad")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model.lazy",
+                      value: product.unit,
+                      expression: "product.unit",
+                      modifiers: { lazy: true }
+                    }
+                  ],
+                  staticClass: "form-control form-control-sm",
+                  attrs: { type: "number", id: "fname" },
+                  domProps: { value: product.unit },
+                  on: {
+                    change: function($event) {
+                      return _vm.$set(product, "unit", $event.target.value)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group col-md-2 text-end" }, [
+                _c("label", { staticClass: "control-label mb-2 d-block" }, [
+                  _vm._v("Eliminar producto")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-danger remove d-inline",
+                    staticStyle: {
+                      "font-size": "22px",
+                      "line-height": "0",
+                      "border-radius": "50px",
+                      width: "40px",
+                      height: "40px"
+                    },
+                    attrs: { type: "button" },
+                    on: {
+                      click: function($event) {
+                        return _vm.deleteProduct(counter)
+                      }
+                    }
+                  },
+                  [_vm._v("-")]
+                )
+              ])
+            ])
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group col-md-12 mt-4 text-end" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-danger add d-inline",
+                staticStyle: {
+                  "font-size": "22px",
+                  "line-height": "0",
+                  "border-radius": "50px",
+                  width: "40px",
+                  height: "40px"
+                },
+                attrs: { type: "button" },
+                on: { click: _vm.addProduct }
+              },
+              [_vm._v("+")]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group col-md-12 mt-4 text-end" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-danger",
+                attrs: { type: "button" },
+                on: {
+                  click: function($event) {
+                    return _vm.handleClick()
+                  }
+                }
+              },
+              [_vm._v("Cotizar")]
+            )
+          ])
+        ],
+        2
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group col-md-12" }, [_c("br")])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-2d87ca7b", module.exports)
+  }
+}
+
+/***/ }),
+/* 67 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

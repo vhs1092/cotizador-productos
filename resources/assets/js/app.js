@@ -16,6 +16,7 @@ import ProductsCreate from './components/products/ProductsCreate.vue';
 import ProductsEdit from './components/products/ProductsEdit.vue';
 import MaterialesCreate from './components/materiales/MaterialesCreate.vue';
 import MaterialesEdit from './components/materiales/MaterialesEdit.vue';
+import CotizadorIndex from './components/cotizador/index.vue';
 
 /*Here are our routes where the index will redirect us to the products index page*/ 
 const routes = [
@@ -31,12 +32,19 @@ const routes = [
             materialesIndex: MaterialesIndex
         }
     },
+        {
+        path: '/cotizador',
+        components: {
+            cotizadorIndex: CotizadorIndex
+        }
+    },
     {path: '/admin/products/create', component: ProductsCreate, name: 'createProduct'},
     {path: '/admin/products/edit/:id', component: ProductsEdit, name: 'editProduct'},
     {path: '/admin/materiales/create', component: MaterialesCreate, name: 'createMaterial'},
     {path: '/admin/materiales/edit/:id', component: MaterialesEdit, name: 'editMaterial'},
+
 ]
 
-const router = new VueRouter({ routes })
+const router = new VueRouter({mode: "history", routes })
 
 const app = new Vue({ router }).$mount('#app')
