@@ -23,13 +23,19 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <label class="control-label">Ancho (centímetros)</label>
+                            <label class="control-label">Lineal</label>
+                            <input type="checkbox" style="width: 30px;" v-model="product.lineal" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 form-group" v-if="!product.lineal">
+                            <label class="control-label">Ancho (metros)</label>
                             <input type="number" step=".01" v-model="product.ancho" class="form-control">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <label class="control-label">Alto (centímetros)</label>
+                            <label class="control-label">{{product.lineal ? 'Largo' : 'Alto'}} (metros)</label>
                             <input type="number" step=".01" v-model="product.alto" class="form-control">
                         </div>
                     </div>

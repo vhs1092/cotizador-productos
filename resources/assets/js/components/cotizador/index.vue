@@ -192,22 +192,57 @@ export default {
                 },
             ]
 
+            console.log(this.allProducts)
+          
             const materials = {};
             const planchas = {};
 
             this.products.map((product) => {
-                const findProduct = productsMaterials.find(prod => prod.name === product.name)
-                findProduct.materials.map(material => {
+                const findProduct = this.allProducts.find(prod => prod.name === product.name)
+                findProduct.materiales.map(material => {
 
-                    const findMaterial = Object.keys(materials).find(element => materials[element].name == material.name)
-                    if (material.isUnitary) {
-                        if (findMaterial) {
-                            materials[findMaterial.id] = materials[findMaterial.id] + 1;
-                        } else {
-                            materials[findMaterial.id] = 1;
+                    const findMaterial = Object.keys(materials).find(element => materials[element].name == material.material.name)
+                    if (!findMaterial) {
+                        materials[material.material.id] = {
+                            name: material.material.name,
+                            unit: null,
+                            lineal: null,
                         }
-                    } else {
+                    } 
 
+                    if (material.material.unitario) {
+                        materials[findMaterial.id]['unit'] = materials[findMaterial.id].unit ? materials[findMaterial.id]['unit'] + 1 : 1;
+                    } else {
+                        if (material.material.lineal) {
+                            const defaultLarge = material.material.alto - (product.width * 2);
+
+                            if (!materials[findMaterial.id]['lineal']) {
+                                let sheet = 1;
+                                const widthCount = 1;
+                                const heightCount = 0;
+                                const allWaste = [];
+
+                                let waste = defaultLarge;
+                              
+                                while (widthCount <= 2 && heightCount <= 2) {
+                                    if (heightCount < 2 && product.width < waste) {
+                                        waste = waste - product.width;
+                                    } else if (heightCount < 2 && product.height < waste) {
+                                        waste = waste - product.width;
+                                    } else {
+                                        sheet = sheet + 1;
+                                        allWaste.push(waste)
+                                        waste = defaultLarge;
+                                    }
+                                }
+
+                                materials[findMaterial.id]['lineal'] = {
+                                    waste,
+                                    sheet
+                                }
+                            }
+                            materials[findMaterial.id]['lineal'] = materials[findMaterial.id].unit ? materials[findMaterial.id]['unit'] + mts : mts;
+                        }
                     }
                 })
             })

@@ -19,6 +19,7 @@ class CreateMaterialsTable extends Migration
             $table->double('alto')->nullable();
             $table->double('ancho')->nullable();
             $table->boolean('unitario')->nullable();
+            $table->boolean('lineal')->nullable();
             $table->timestamps();
         });
     }
